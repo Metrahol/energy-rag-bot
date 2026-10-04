@@ -31,7 +31,7 @@ flowchart TB
         REWRITE --> HYBRID["Гибридный поиск: Векторы + BM25"]
         CHROMA --> HYBRID
         BM25 --> HYBRID
-        HYBRID -->|Reciprocal Rank Fusion (RRF)| TOPK["Top-K релевантных фрагментов"]
+        HYBRID -->|"Reciprocal Rank Fusion (RRF)"| TOPK["Top-K релевантных фрагментов"]
         TOPK --> LLM["DeepSeek: генерация ответа эксперта с цитатами [1], [2]"]
         LLM --> TG["Форматирование в Telegram HTML + список источников"]
         TG --> USER
