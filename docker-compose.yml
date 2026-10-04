@@ -1,0 +1,10 @@
+services:
+  bot:
+    build: .
+    container_name: sber_energy_bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./storage:/app/storage
